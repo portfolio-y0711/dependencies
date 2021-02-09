@@ -1,5 +1,9 @@
 module.exports =  [
     {    
+        img: 'assets/images/libraries/moment.png',
+        lib: 'moment'
+    },
+    {    
         img: 'assets/images/libraries/faker.png',
         lib: 'faker'
     },
@@ -8,11 +12,11 @@ module.exports =  [
         lib: 'jquery'
     },
     {    
-        img: 'assets/images/libraries/handlebars.png',
-        lib: 'handlebars'
-    },
-    {    
         img: 'assets/images/libraries/winston.png',
         lib: 'winston'
+    },
+    {    
+        img: 'assets/images/libraries/typeorm-seeding.png',
+        lib: 'typeorm-seeding',
     },
 ];

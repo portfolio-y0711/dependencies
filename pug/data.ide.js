@@ -1,8 +1,8 @@
 module.exports = [
-    // {    
-    //     img: 'assets/images/libraries/idea.png',
-    //     lib: 'idea',
-    // },
+    {    
+        img: 'assets/images/libraries/idea.png',
+        lib: 'idea',
+    },
     {    
         img: 'assets/images/libraries/vscode.png',
         lib: 'vscode',
@@ -11,8 +11,8 @@ module.exports = [
     //     img: 'assets/images/libraries/iterm.png',
     //     lib: 'iterm',
     // },
-    // {    
-    //     img: 'assets/images/libraries/eclipse.png',
-    //     lib: 'eclipse',
-    // },
+    {    
+        img: 'assets/images/libraries/eclipse.png',
+        lib: 'eclipse',
+    },
 ]

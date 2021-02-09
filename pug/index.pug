@@ -24,9 +24,11 @@ mixin displayitem(item, name)
 -const ide = require('./pug/data.ide.js');
 -const packaging = require('./pug/data.packaging.js');
 -const dataplatform = require('./pug/data.dataplatform.js');
--const webframework = require('./pug/data.webframework.js');
+-const framework = require('./pug/data.webframework.js');
 -const database = require('./pug/data.database.js');
--const lists = ['os', 'lang', 'server', 'testing', 'devops', 'app', 'adaptor', 'util', 'ide', 'packaging', 'dataplatform', 'webframework', 'database'];
+-const renderer = require('./pug/data.renderer.js');
+-const transpiler = require('./pug/data.transpiler.js');
+-const lists = ['os', 'renderer', 'lang', 'server', 'testing', 'devops', 'app', 'adaptor', 'util', 'ide', 'packaging', 'dataplatform', 'webframework', 'database'];
 
 doctype html
 html(lang='en')
@@ -45,13 +47,17 @@ html(lang='en')
 
       +displayitem(lang, 'lang')
 
+      +displayitem(transpiler, 'transpiler')
+
       +displayitem(database, 'database')
 
       +displayitem(adaptor, 'adaptor')
 
       +displayitem(server, 'server')
 
-      +displayitem(webframework, 'web')
+      +displayitem(framework, 'framework')
+
+      +displayitem(renderer, 'renderer')
 
       +displayitem(app, 'app')
 
