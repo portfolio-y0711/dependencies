@@ -1,0 +1,64 @@
+mixin card(cardinfo)
+  div.thumbnail(class="" + cardinfo.lib)
+    a(href target='_blank')
+    img(src=cardinfo.img alt='Lights' style='width:100%')
+    div.caption
+        p=cardinfo.lib
+
+mixin displayitem(item, name)
+  if item.length > 0
+    div.card
+      div.name=name
+      div.grid-container
+        each card in item
+          +card(card)
+
+-const os = require('./pug/data.os.js');
+-const lang = require('./pug/data.lang.js');
+-const server = require('./pug/data.server.js');
+-const testing = require('./pug/data.testing.js');
+-const devops = require('./pug/data.devops.js');
+-const app = require('./pug/data.app.js');
+-const adaptor = require('./pug/data.db-adaptor.js');
+-const util = require('./pug/data.util.js');
+-const ide = require('./pug/data.ide.js');
+-const packaging = require('./pug/data.packaging.js');
+-const dataplatform = require('./pug/data.dataplatform.js');
+-const webframework = require('./pug/data.webframework.js');
+-const database = require('./pug/data.database.js');
+-const lists = ['os', 'lang', 'server', 'testing', 'devops', 'app', 'adaptor', 'util', 'ide', 'packaging', 'dataplatform', 'webframework', 'database'];
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title Document
+    link(rel='stylesheet' href='./style.css')
+    script(src='./bundle.js')
+  body
+    h2 개발 환경 / 라이브러리
+
+    div.flex-container
+      +displayitem(os, 'os')
+
+      +displayitem(lang, 'lang')
+
+      +displayitem(database, 'database')
+
+      +displayitem(adaptor, 'adaptor')
+
+      +displayitem(server, 'server')
+
+      +displayitem(webframework, 'web')
+
+      +displayitem(app, 'app')
+
+      +displayitem(devops, 'devops')
+
+      +displayitem(dataplatform, 'dataplatform')
+
+      +displayitem(testing, 'testing')
+
+    script(src='./app.js')
