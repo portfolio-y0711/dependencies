@@ -9,6 +9,6 @@
 publish 되어 프로젝트를 소개하는 README.md 문서에 아래와 같은 문서 링크로    
 참조될 예정입니다.  
 
-[개발환경 & 사용한 라이브러리]()
+[개발환경 & 사용한 라이브러리](https://portfolio-y0711.github.io/dependencies)
 
 
